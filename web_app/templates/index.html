@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mashup Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎶 Mashup Generator</h1>
+
+    {% if success %}
+        <div class="success">
+            ✅ Mashup generated and sent to your email!
+        </div>
+    {% endif %}
+
+    <form method="post" action="/">
+        <label>Singer Name</label>
+        <input type="text" name="singer" placeholder="e.g. Arijit Singh" required>
+
+        <label>Number of Videos</label>
+        <input type="number" name="videos" min="11" required>
+
+        <label>Duration (seconds)</label>
+        <input type="number" name="duration" min="21" required>
+
+        <label>Email ID</label>
+        <input type="email" name="email" required>
+
+        <button type="submit">Generate Mashup</button>
+    </form>
+</div>
+
+</body>
+</html>

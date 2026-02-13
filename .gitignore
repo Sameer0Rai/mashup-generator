@@ -1,0 +1,8 @@
+.venv/
+downloads/
+trimmed/
+output/
+__pycache__/
+*.mp3
+*.zip
+.env
